@@ -10,7 +10,7 @@ body {
     padding: 20px;
 }
 .container {
-    width: 1200px;
+    width: 800px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -19,9 +19,11 @@ body {
 }
 .simulator {
     display: flex;
-    height: 600px;
+    height: 400px;
 }
 .cpu, .ram {
+    resize: both;
+    overflow: auto; /* something other than visible */
     flex: 1;
     padding: 20px;
     display: flex;
@@ -110,7 +112,7 @@ select, input {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
-    height: 38px; /* Ensure they have the same height */
+    height: auto; /* Ensure they have the same height */
     font-size: 16px; /* Ensure they have the same font size */
 }
 select {
@@ -144,6 +146,7 @@ select {
 #explanationToggle {
     width: 100%;
     margin-top: 0;
+    margin-bottom: auto;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }

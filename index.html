@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced CPU Simulator with Collapsible Explanation</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+    <title>Simple CPU Simulator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
             <div class="cpu">
                 <h2>CPU</h2>
                 <div class="register">
-                    <h3>Programme Counter</h3>
+                    <h3>Program Counter</h3>
                     <div id="pc" class="register-value">0</div>
                 </div>
                 <div class="register">
@@ -51,11 +51,10 @@
                             <tr>
                                 <th>Address</th>
                                 <th>Value</th>
-                                <th class="edit-column hidden">Edit</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- RAM content will be populated here -->
+                            <!-- RAM rows will be dynamically inserted here -->
                         </tbody>
                     </table>
                 </div>
@@ -67,15 +66,15 @@
             <p>This simulator demonstrates the basic functioning of a Central Processing Unit (CPU) in a computer. At its core, every modern computer operates on similar principles, no matter how complex its tasks may seem.</p>
             <p>The simulation shows three main components:</p>
             <ul>
-                <li><strong>CPU:</strong> The brain of the computer, containing registers for temporary data storage and processing.</li>
-                <li><strong>RAM (Random Access Memory):</strong> Where instructions and data are stored for quick access.</li>
-                <li><strong>Clock:</strong> Represented by the "Clock Tick" button, it drives the CPU through its cycle.</li>
+                <li><strong>CPU:</strong> the brain of the computer, containing registers for temporary data storage and processing.</li>
+                <li><strong>RAM (Random Access Memory):</strong> where instructions and data are stored for quick access.</li>
+                <li><strong>Clock:</strong> represented by the "Clock Tick" button, it drives the CPU through its cycle.</li>
             </ul>
             <p>The CPU operates in a continuous "Fetch-Decode-Execute" cycle:</p>
             <ol>
-                <li><strong>Fetch:</strong> The CPU retrieves an instruction from RAM.</li>
-                <li><strong>Decode:</strong> The CPU interprets the instruction.</li>
-                <li><strong>Execute:</strong> The CPU carries out the instruction.</li>
+                <li><strong>Fetch:</strong> the CPU retrieves an instruction from RAM.</li>
+                <li><strong>Decode:</strong> the CPU interprets the instruction.</li>
+                <li><strong>Execute:</strong> the CPU carries out the instruction.</li>
             </ol>
             <p>In this simulator, you can see this cycle in action. The program loaded into RAM is a simple counting program. With each complete cycle, it increments a value stored in RAM.</p>
             <p>While this simulation runs at a speed we can observe, real CPUs execute billions of instructions per second. This incredible speed allows computers to perform complex tasks like playing video games or displaying this web page.</p>
