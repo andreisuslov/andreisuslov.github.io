@@ -10,7 +10,7 @@ body {
     padding: 20px;
 }
 .container {
-    width: 800px;
+    width: auto;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -19,7 +19,8 @@ body {
 }
 .simulator {
     display: flex;
-    height: 400px;
+    height: auto;
+    max-height: 600px;
 }
 .cpu, .ram {
     resize: both;
@@ -84,6 +85,11 @@ button:hover {
     overflow-y: auto;
     margin-top: 10px;
 }
+.ram-header {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Spreads out items evenly with space between */
+}
 table {
     width: 100%;
     border-collapse: collapse;
@@ -104,19 +110,23 @@ th {
 .input-group {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 select, input {
-    margin-top: 10px;
-    width: 100%;
     padding: 5px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
-    height: auto; /* Ensure they have the same height */
-    font-size: 16px; /* Ensure they have the same font size */
+    height: 38px;
+    font-size: 16px;
 }
 select {
-    margin-bottom: 5px;
+    flex: 1;
+    margin-right: 5px;
+}
+input {
+    flex: 1;
 }
 .mode-switch {
     display: flex;
@@ -175,4 +185,25 @@ select {
 }
 .explanation ul li, .explanation ol li {
     margin-bottom: 5px;
+}
+td select,
+td input {
+    width: calc(50% - 5px); /* Each takes up half the space minus 5px for gap */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 38px;
+    font-size: 16px;
+}
+td select {
+    margin-right: 10px; /* Gap between select and input */
+}
+td:nth-child(2) {
+    padding: 4px;
+}
+td .input-group {
+    display: flex;
+    width: 100%;
 }
