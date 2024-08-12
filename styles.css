@@ -168,6 +168,7 @@ input {
     transition: max-height 0.3s ease-out;
     padding: 0 20px; /* Add padding for better readability */
     box-sizing: border-box;
+    margin-bottom: 20px;
 }
 .explanation.visible {
     max-height: 1000px; /* Adjust this value based on your content */
